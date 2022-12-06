@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=jd_openwrt_script
 PKG_VERSION:=1
-PKG_RELEASE:=12
+PKG_RELEASE:=13
 #PKG_FLAGS:=nonshared
 
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
@@ -19,17 +19,24 @@ include $(INCLUDE_DIR)/package.mk
 define Package/jd_openwrt_script
   TITLE:=x86/x64 Install Script.
   MAINTAINER:=ITdesk
-  DEPENDS:=+git +git-http +node +node-npm +openssh-client +openssh-keygen +python3
+  DEPENDS:=+git +git-http +node +node-npm +openssh-client +openssh-keygen +python3 +luci-app-dockerman
 endef
 
 define Package/jd_openwrt_script/description
 Script Used
-	https://github.com/ITdesk01/JD_Script
-	https://github.com/ITdesk01/Checkjs
+	1.https://github.com/xdhgsq/xdh.git
+	2.https://github.com/xdhgsq/xdh_plug.git
+	3.https://github.com/ITdesk01/Checkjs.git
 
 Dependent requirements
-	node >=10
-	node-npm >=10
+	git *
+	git-http *
+	node >=10 *
+	node-npm >=10 *
+	openssh-client
+	openssh-keygen
+	python3 *
+	luci-app-dockerman *
 
 Please meet the above dependencies, otherwise you may not be able to use the script normally
 
