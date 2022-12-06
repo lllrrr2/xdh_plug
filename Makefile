@@ -9,7 +9,7 @@ include $(TOPDIR)/rules.mk
 
 PKG_NAME:=jd_openwrt_script
 PKG_VERSION:=1
-PKG_RELEASE:=13
+PKG_RELEASE:=14
 #PKG_FLAGS:=nonshared
 
 PKG_BUILD_DIR := $(BUILD_DIR)/$(PKG_NAME)
@@ -26,7 +26,7 @@ define Package/jd_openwrt_script/description
 Script Used
 	1.https://github.com/xdhgsq/xdh.git
 	2.https://github.com/xdhgsq/xdh_plug.git
-	3.https://github.com/ITdesk01/Checkjs.git
+	3.https://github.com/xdhgsq/Checkjs.git
 
 Dependent requirements
 	git *

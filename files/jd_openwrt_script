@@ -19,7 +19,7 @@ start() {
 		echo -e "$yellow 本插件使用到的脚本$white"
 		echo "  1.https://github.com/xdhgsq/xdh.git"
 		echo "  2.https://github.com/xdhgsq/xdh_plug.git"
-		echo "  3.https://github.com/ITdesk01/Checkjs.git"
+		echo "  3.https://github.com/xdhgsq/Checkjs.git"
 		echo ""
 		echo -e "$yellow 等安装完成以后可以用以下代码调用脚本$white"
 		echo -e "$green  sh \$jd $white      #调用JD_Script"
@@ -71,7 +71,7 @@ start() {
 			echo -e "$green script_config/wskey已存在$white"
 			sh $dir_file/Checkjs/checkjs.sh system_variable
 		else
-			git clone https://github.com/ITdesk01/Checkjs.git $dir_file/Checkjs
+			git clone https://github.com/xdhgsq/Checkjs.git $dir_file/Checkjs
 			chmod 755 $dir_file/Checkjs/checkjs.sh
 			sh $dir_file/Checkjs/checkjs.sh system_variable
 		fi
