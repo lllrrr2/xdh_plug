@@ -59,17 +59,21 @@ start() {
 		#wskey转换
 		if [ -e $dir_file/script_config/wskey ];then
 			echo -e "$green script_config/wskey已存在$white"
+			sh $dir_file/script_config/wskey/wskey.sh if_system
 		else
 			git clone https://github.com/xdhgsq/wskey_convert.git $dir_file/script_config/wskey
 			chmod 755 $dir_file/script_config/wskey/wskey.sh
+			sh $dir_file/script_config/wskey/wskey.sh if_system
 		fi
 
 		#checkjs(用于检测上游仓库更新和监控tg变量)
 		if [ -e $dir_file/Checkjs ];then
 			echo -e "$green script_config/wskey已存在$white"
+			sh $dir_file/Checkjs/checkjs.sh system_variable
 		else
 			git clone https://github.com/ITdesk01/Checkjs.git $dir_file/Checkjs
 			chmod 755 $dir_file/Checkjs/checkjs.sh
+			sh $dir_file/Checkjs/checkjs.sh system_variable
 		fi
 
 		#开始下载脚本
