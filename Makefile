@@ -19,7 +19,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/jd_openwrt_script
   TITLE:=x86/x64 Install Script.
   MAINTAINER:=ITdesk
-  DEPENDS:=+git +git-http +node +node-npm +openssh-client +openssh-keygen +python3 +luci-app-dockerman
+  DEPENDS:=+git +git-http +node +node-npm +openssh-client +openssh-keygen +python3 +luci-app-dockerman +fdisk
 endef
 
 define Package/jd_openwrt_script/description
@@ -37,6 +37,7 @@ Dependent requirements
 	openssh-keygen
 	python3 *
 	luci-app-dockerman *
+	fdisk *
 
 Please meet the above dependencies, otherwise you may not be able to use the script normally
 
