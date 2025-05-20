@@ -141,6 +141,7 @@ stop() {
 		sed -i '/wskey/d' /etc/profile >/dev/null 2>&1
 		sed -i '/checkjs/d' /etc/profile >/dev/null 2>&1
 		sed -i '/Checkjs/d' /etc/profile >/dev/null 2>&1
+		sed -i '/uname_if/d' /etc/profile >/dev/null 2>&1
 
 		sleep 5
 
