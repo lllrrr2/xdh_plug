@@ -60,6 +60,8 @@ start() {
 		else
 			git clone https://github.com/xdhgsq/wskey_convert.git $dir_file/script_config/wskey
 			chmod 755 $dir_file/script_config/wskey/wskey.sh
+			echo "export wskey_file=$dir_file/script_config/wskey" >> /etc/profile
+			echo "export wskey=$dir_file/script_config/wskey/wskey.sh" >> /etc/profile
 			sh $dir_file/script_config/wskey/wskey.sh if_system
 		fi
 
@@ -70,7 +72,8 @@ start() {
 		else
 			git clone https://github.com/xdhgsq/Checkjs.git $dir_file/Checkjs
 			chmod 755 $dir_file/Checkjs/checkjs.sh
-			sh $dir_file/Checkjs/checkjs.sh system_variable
+			echo "export checkjs_file=$dir_file/Checkjs" >> /etc/profile
+			echo "export checkjs=$dir_file/Checkjs/checkjs.sh" >> /etc/profile
 		fi
 
 		#开始下载脚本
