@@ -161,3 +161,22 @@ stop() {
 }
 
 
+action1="$1"
+action2="$2"
+if [[ -z $action1 ]]; then
+	echo "脚本用法 "
+	echo "开启sh jd_openwrt_script_ubuntu start"
+	echo "删除sh jd_openwrt_script_ubuntu stop"
+else
+	case "$action1" in
+		start|stop|)
+		$action1
+		*)
+		echo "脚本用法 "
+		echo "开启sh jd_openwrt_script_ubuntu start"
+		echo "删除sh jd_openwrt_script_ubuntu stop"
+		;;
+	esac
+fi
+
+
