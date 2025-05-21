@@ -8,7 +8,7 @@ yellow="\033[33m"
 white="\033[0m"
 
 dir_file="/usr/share/jd_openwrt_script"
-
+bash="/usr/bin/bash"
 start() {
 	if [ ! -f $dir_file/JD_Script/jd.sh ];then
 		clear
@@ -87,7 +87,7 @@ start() {
 
 		#全局变量生效
 		echo "export uname_if=Ubuntu" >> /etc/profile
-		source /etc/profile
+		$bash source /etc/profile
 
 		#检测npm依赖(安装时间太久，放到最后)
 		npm_install
@@ -160,7 +160,7 @@ stop() {
 		echo "---------------------------------------------------------"
 		echo "			删除完成，玩的开心"
 		echo "---------------------------------------------------------"
-		. /etc/profile
+		$bash source /etc/profile
 
 }
 
